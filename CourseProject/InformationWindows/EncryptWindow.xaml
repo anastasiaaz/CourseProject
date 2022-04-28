@@ -1,0 +1,17 @@
+﻿<Window x:Class="CourseProject.InformationWindows.EncryptWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseProject.InformationWindows"
+        mc:Ignorable="d"
+        Title="Зашифровать" WindowStyle="ToolWindow" Width="470" Height="320" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Готово" HorizontalAlignment="Right" Margin="0,0,78,10" VerticalAlignment="Bottom" Width="60" Name="ReadyButton" Click="ReadyButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Name="MessageTextBox" Width="433" Height="200" AcceptsReturn="True"/>
+        <Label Content="Введите сообщение:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="433" Name="label"/>
+        <Button Content="Отмена" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" IsCancel="True" Width="63"/>
+        <Label Content="Ключ" HorizontalAlignment="Left" Margin="10,0,0,10" RenderTransformOrigin="2.297,0.766" Padding="0" Name="KeyLabel" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,0,0,10" TextWrapping="NoWrap" Text="" Width="150" Name="KeyTextBox" Height="23" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
