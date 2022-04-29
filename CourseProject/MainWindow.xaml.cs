@@ -62,6 +62,12 @@ namespace CourseProject
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(ResultTextBlock.Text))
+            {
+                MessageBox.Show("Ничего не было введено. Файл не будет сохранен!");
+                return;
+            }
+            
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.DefaultExt = ".txt";
             saveFileDialog.FileName = "message";
@@ -70,7 +76,7 @@ namespace CourseProject
             {
                 return;
             }
-
+                        
             using (FileStream fileStream = File.OpenWrite(saveFileDialog.FileName))
             {
                 using (StreamWriter streamWriter = new StreamWriter(fileStream))
